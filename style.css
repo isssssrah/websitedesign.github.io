@@ -1,0 +1,212 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 3D Parallax Background with Light Blue */
+body {
+    background: linear-gradient(120deg, #ADD8E6, #66a3ff), url('') no-repeat center center fixed; /* Light blue gradient with your background image */
+    background-size: cover;
+    color: #ffffff;
+    perspective: 1000px;
+    overflow-x: hidden;
+}
+
+/* Gradient Animation (Keep this for smooth transitions) */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10; /* Keep navigation on top */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #4981cf;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0a74da;
+}
+
+/* Hero Section with 3D Effect */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 5;
+    transform: translateZ(0);
+}
+
+header h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ffffff;
+    
+    margin-bottom: 20px;
+}
+
+header button {
+    background-color: #0665bf;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #021b79;
+}
+
+/* Sections with 3D Depth */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    background-color: #1711d01a; /* Slight background transparency */
+    margin-top: 100px; /* Offset from fixed navbar */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05); /* Add hover effect for depth */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #003366; /* Dark blue color for subheadings */
+}
+
+section p {
+    font-size: 1.1em;
+    color: #ffffff;
+    
+}
+
+/* Contact Form with Floating Input Effect */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    font-size: 1em;
+    color: #ffffff;
+    
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #0a74da;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+    transform: scale(1.05);
+    border-color: #021b79;
+}
+
+/* Testimonials Section */
+.testimonials-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.testimonial {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: translateZ(0);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
